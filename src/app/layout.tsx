@@ -1,6 +1,7 @@
+import Footer from '@/components/Footer/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Montserrat, Roboto_Mono } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
 
 const montserrat = Montserrat({ 
@@ -22,7 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={twMerge(montserrat.variable, 'font-sans')}>{children}</body>
+      <body className={twMerge(montserrat.variable, 'font-sans bg-neutral-950 text-neutral-300')}>
+          <main className="w-screen p-5 lg:text-xl xl:text-2xl"
+    style={{ height: 'calc(100vh - 40px' }}
+    >
+            {children}
+
+          </main>
+            <Footer />
+        </body>
     </html>
   )
 }
