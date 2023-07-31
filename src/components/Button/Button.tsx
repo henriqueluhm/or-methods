@@ -1,17 +1,25 @@
-import { ReactElement } from 'react'
-import { ButtonProperties } from './types'
+import { ReactElement, useState } from 'react';
+import { ButtonProperties } from './types';
+import { twMerge } from 'tailwind-merge';
 
 export default function Button({
   children,
-  onClick,
+  ...properties
 }: ButtonProperties): ReactElement {
   return (
     <button
-      type="button"
-      onClick={onClick}
-      className="border select-none border-white text-neutral-400 hover:text-neutral-300 py-2 px-6 bg-neutral-950 hover:shadow-button rounded-sm duration-200"
+      {...properties}
+      className={twMerge(
+        'border select-none border-white text-neutral-400 py-2 px-6 bg-neutral-950 rounded-sm transition-all duration-200',
+
+        'hover:text-neutral-300 hover:shadow-neon',
+
+        'disabled:hover:shadow-none disabled:cursor-not-allowed disabled:hover:text-neutral-700 disabled:border-neutral-700 disabled:text-neutral-700',
+
+        properties.className,
+      )}
     >
       {children}
     </button>
-  )
+  );
 }

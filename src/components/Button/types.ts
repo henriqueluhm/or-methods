@@ -1,6 +1,6 @@
-import { ReactNode } from "react"
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export interface ButtonProperties {
-    onClick: () => void
-    children: ReactNode
+export interface ButtonProperties
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
 }
