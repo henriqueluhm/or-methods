@@ -5,7 +5,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
 
-    // Or if using `src` directory:
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -14,9 +13,9 @@ module.exports = {
         sans: ['var(--font-montserrat)'],
       },
       boxShadow: {
-        button: '0 0 1px rgba(255, 255, 255), 0 0 5px rgba(255, 255, 255)',
+        neon: '0 0 2px #FFF, 0 0 6px #FFF',
       },
     },
   },
   plugins: [],
-}
+};
