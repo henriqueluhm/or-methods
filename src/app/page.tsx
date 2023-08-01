@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import Button from '@/components/Button/Button';
 import { ReactElement } from 'react';
-import { AvailableMethods } from '@/types';
+import { AvailableMethods } from '@/commonTypes';
 import Title from '@/components/Title/Title';
 
 export default function Home(): ReactElement {
