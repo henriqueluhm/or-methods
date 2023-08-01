@@ -1,7 +1,7 @@
 import { FormProvider, useForm } from 'react-hook-form';
 import type { ReactElement } from 'react';
 import type { FieldValues } from 'react-hook-form';
-import { FormProperties } from './types';
+import type { FormProperties } from './types';
 
 export default function Form<T extends FieldValues>({
 	id,
